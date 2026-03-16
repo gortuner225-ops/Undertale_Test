@@ -1,0 +1,1 @@
+global.bg_music_id = audio_play_sound(snd_sans_theme, 1, true)
