@@ -1,0 +1,1 @@
+#macro ROOM_LABELS { MainRoom: "Grillby's"}

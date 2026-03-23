@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"non-battle",
-    "path":"folders/Sprites/non-battle.yy",
+    "name":"sans",
+    "path":"folders/Sprites/non-battle/sans.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

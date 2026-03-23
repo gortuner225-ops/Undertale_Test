@@ -2,12 +2,15 @@ if (current_message < 0) exit;
     
 _str = messages[current_message].text
 
+show_debug_message("cm: {0}, cr: {1}, cl: {2}", current_message, current_char, current_line)
+
 if (current_line < array_length(_str)){
     str_len = string_length(_str[current_line])
     
     if (keyboard_check_pressed(vk_shift) or keyboard_check_pressed(ord("X"))){
         draw_message = string_join_ext("", _str)
         current_line = array_length(_str)
+        current_char = str_len
     }
     else {
        if (current_char < str_len + 0.1 * (str_len % char_speed == 0)) { 
