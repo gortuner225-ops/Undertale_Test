@@ -39,6 +39,9 @@
     "name":"sp_frisk_back_idle",
     "path":"sprites/sp_frisk_back_idle/sp_frisk_back_idle.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"sp_frisk_back_idle",
+    "path":"sprites/sp_frisk_back_idle/sp_frisk_back_idle.yy",
+  },
   "visible":true,
 }

@@ -10,26 +10,46 @@ function frisk_set_idle(){
     }
 }
 
-function frisk_movement(){
+function player_movement(){
     if (instance_exists(obj_frisk)){
       _hor = (keyboard_check(vk_right) or keyboard_check(ord("D"))) - (keyboard_check(vk_left) or keyboard_check(ord("A")))
       _ver = (keyboard_check(vk_down) or keyboard_check(ord("S"))) - (keyboard_check(vk_up) or keyboard_check(ord("W")))
       
       if (not (_hor == 0 and _ver == 0)){
-          if (_ver > 0) obj_frisk.sprite_index = sp_frisk_front_walk
+          if (_ver > 0) {
+            obj_frisk.sprite_index = sp_frisk_front_walk
+            direction = 270 
+        }
               
-          else if (_ver < 0) obj_frisk.sprite_index = sp_frisk_back_walk
+          else if (_ver < 0) {
+            obj_frisk.sprite_index = sp_frisk_back_walk
+            direction = 90
+        }
               
-          else if (_hor > 0) obj_frisk.sprite_index = sp_frisk_rigth_walk
+          else if (_hor > 0) {
+            obj_frisk.sprite_index = sp_frisk_rigth_walk
+            direction = 0
+        }
               
-          else if (_hor < 0) obj_frisk.sprite_index = sp_frisk_left_walk
+          else if (_hor < 0) {
+            obj_frisk.sprite_index = sp_frisk_left_walk
+            direction = 180
+        }
       }
       
       else {
         frisk_set_idle()
     }
       
-      move_and_collide(_hor * obj_frisk.move_speed, _ver * obj_frisk.move_speed, [obj_frisk.tilemap, obj_save], 
+      move_and_collide(_hor * obj_frisk.move_speed, _ver * obj_frisk.move_speed, [obj_sans, obj_save, obj_collider], 
                       undefined, undefined, undefined, obj_frisk.move_speed, obj_frisk.move_speed)
+        
+        x[0] = round(x[0.1])
+        y[0] = round(y[0.1])
+    
     }
+}
+
+function move_frisk(){
+    
 }
